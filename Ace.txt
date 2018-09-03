@@ -74,7 +74,7 @@ NPG = gg.choice({
 "➢Range of Damage",
 "➢Ext View",
 "➢No Grass",
-"➢The Flash ",
+"➢The Flash (becarefull!)",
 "↶"},
 nil,"Use after Landing ")
 if NPG == 1 then WHMENU() end
