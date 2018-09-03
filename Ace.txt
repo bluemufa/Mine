@@ -35,8 +35,8 @@ function HOME()
 	"4.[WEAPONFAST]",
 	"4.[SCOPE]",
 	"[ EXIT ]"
-  }, nil, "Ace & Ubur Script 
- Do Not Share/Sell! Or I'll Ban you! ")
+  }, nil, "Ace & Ubur Script Do Not Share/Sell! Or I'll Ban you! ")
+
   if HM == 1 then	LOBBY()		end
   if HM == 2 then	INGAME()	end
   if HM == 3 then	COLOR()		end
