@@ -662,7 +662,7 @@ end
 -----------------------------------------------------// END BODY //-----------------------------------------------------
 function backdoor() 
     gg.setVisible(false)
-    HH = gg.alert('Bypass?', '[Yes]', '[No]')
+    HH = gg.alert('Bypass?', '[Yes]', '[No]')
     if HH == 1 then bypass() end
     if HH == 2 then end 
 end 
