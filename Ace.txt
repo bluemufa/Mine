@@ -1,5 +1,5 @@
 function bypass()
-gg.toast("Bypass is working...")
+gg.toast("Bypass is working...")
 gg.setVisible(false)
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_BAD)
 gg.skipRestoreState()
