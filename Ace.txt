@@ -25,16 +25,16 @@ gg.searchNumber("1.2F;1.8F:9::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1F;1.4F:3::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1D;1.4D:2::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.clearResults(850)
-    gg.toast(os.date("%Y/%m/%d  %H:%M:%S Bypass Aktif"))
+    gg.toast(os.date("%Y/%m/%d  %H:%M:%S Bypass Aktif"))
 end
 
 function HOME()
   HM = gg.choice({
-    "[No Rec Lobby/Land]",
+    "[No Rec Lobby/Land]",
     "[INGAME]",
     "[COLOR]",
     "[WEAPONFAST]",
-    "[SCOPE]",
+    "[SCOPE]",
     "[LOBBY]",
     "[EXIT]"
   }, nil, "Ace Burgerkill's Script8.0")
@@ -57,10 +57,10 @@ NPL = gg.choice({
 "Wallhack SD 625",
 "No Recoil",
 "Micro Aim",
-"Medium Aim",
-"Ultra Aim",
-"Auto HS",
-"Small Crosshair",
+"Medium Aim",
+"Ultra Aim",
+"Auto HS",
+"Small Crosshair",
 "Back"},
 nil,"Don't Forget Aktive No Recoil again in Game Menu")
 if NPL == 1 then WHN() end
@@ -98,14 +98,14 @@ if NPG == 9 then HOME() end
 end
 function COLOR()
 NPC = gg.choice({
-"Green (Tested)",
-"Yellow (Tested)",
-"White v1",
-"White v2",
-"White v3",
-"Black v1",
-"Black v2",
-"Rain Bow",
+"Green (Tested)",
+"Yellow (Tested)",
+"White v1",
+"White v2",
+"White v3",
+"Black v1",
+"Black v2",
+"Rain Bow",
 "Back"},
 nil,"For Emulator Just Work With White/Black")
 if NPC == 1 then BGREEN() end
@@ -150,10 +150,10 @@ if NPW == 12 then HOME() end
 end
 function SCOPE()
 ZOOMX = gg.choice({
-"Scope4x ON",
-"Scope4x OFF",
-"Scope8x ON",
-"Scope8x OFF",
+"Scope4x ON",
+"Scope4x OFF",
+"Scope8x ON",
+"Scope8x OFF",
 "Back"},
 nil,"Scope Mode Untuk Red Dot")
 if ZOOMX == 1 then Z4X() end
