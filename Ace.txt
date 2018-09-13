@@ -1,8 +1,10 @@
 function bypass()
-gg.toast("🛡️Bypass is working...")
+gg.toast("ðŸ›¡ï¸Bypass is working...")
 gg.setVisible(false)
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_BAD)
 gg.skipRestoreState()
+gg.searchNumber("1D;1F;1E;1Q;1X", gg.TYPE_AUTO, false, gg.SIGN_EQUAL, 0, -1)
+gg.clearResults()
 gg.searchNumber("1.2F;1.8F:9::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1F;1.4F:3::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1D;1.4D:2::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
@@ -23,20 +25,20 @@ gg.searchNumber("1.2F;1.8F:9::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1F;1.4F:3::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1D;1.4D:2::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.clearResults(850)
-    gg.toast(os.date("🛡️%Y/%m/%d  %H:%M:%S Bypass Aktif"))
+    gg.toast(os.date("ðŸ›¡ï¸%Y/%m/%d  %H:%M:%S Bypass Aktif"))
 end
 
 function HOME()
   HM = gg.choice({
-    "👁[Mata Dewa]",
-    "🎮[INGAME]",
-    "🏳‍🌈[COLOR]",
-    "🔪[WEAPONFAST]",
-    "🔍[SCOPE]",
-    "🏠[LOBBY]",
-    "❌⟦ Exit ⟧"
-  }, nil, "⊶Ace Burgerkill's Script⊷")
-  if HM == 1 then	WHMENU()		end
+    "ðŸ‘[No Rec Lobby/Land]",
+    "ðŸŽ®[INGAME]",
+    "ðŸ³â€ðŸŒˆ[COLOR]",
+    "ðŸ”ª[WEAPONFAST]",
+    "ðŸ”[SCOPE]",
+    "ðŸ [LOBBY]",
+    "âŒâŸ¦ Exit âŸ§"
+  }, nil, "âŠ¶Ace Burgerkill's Script8.0âŠ·")
+  if HM == 1 then	NRMENU()	end
   if HM == 2 then	INGAME()	end
   if HM == 3 then	COLOR()		end
   if HM == 4 then	WEAPON()	end
@@ -45,18 +47,23 @@ function HOME()
   if HM == 7 then	EXIT()		end
   HOMEDM = -1
 end
+
+function NRMENU()	
+HSMEN = gg.alert('Lobby/Land?', '[Landing]', '[Lobby]')
+    if HSMEN == 1 then NRNGAMING() end
+    if HSMEN == 2 then NRN() end 
 function LOBBY()
 NPL = gg.choice({
-"🏠NoRec+MedAIM+HS⟦ Paket Happy ⟧",
-"🏠No Recoil⟦ Once ⟧",
-"🏠Micro Aim⟦ Once ⟧",
-"🏠Medium Aim⟦ Once ⟧",
-"🏠Ultra Aim⟦ Dont ⟧",
-"🏠Auto HS⟦ Once ⟧",
-"🏠Small Crosshair⟦ Once ⟧",
-"↶\n⟦ Back ⟧"},
-nil,"Dont Use Ultra AIM Menu if you want active AutoHS")
-if NPL == 1 then NRN() MAN() LOWHS() end
+"ðŸ Wallhack SD 625",
+"ðŸ No RecoilâŸ¦ Once âŸ§",
+"ðŸ Micro AimâŸ¦ Once âŸ§",
+"ðŸ Medium AimâŸ¦ Once âŸ§",
+"ðŸ Ultra AimâŸ¦ Dont âŸ§",
+"ðŸ Auto HSâŸ¦ Once âŸ§",
+"ðŸ Small CrosshairâŸ¦ Once âŸ§",
+"â†¶\nâŸ¦ Back âŸ§"},
+nil,"Don't Forget Aktive No Recoil again in Game Menu")
+if NPL == 1 then WHN() end
 if NPL == 2 then NRN() end
 if NPL == 3 then MIAM() end
 if NPL == 4 then MAN() end
@@ -68,19 +75,19 @@ if NPL == 8 then HOME() end
 end
 function INGAME()
 NPG = gg.choice({
-"🎮WH⟦ Snapdragon 625 ⟧",
-"🎮Antena ",
-"🎮Antena Kar",
-"🎮Antena Helmet+Vest3+Scope",
-"🎮Range of Damage",
-"🎮Ext View",
-"🎮No Grass",
-"🎮The Flash (becarefull!)",
-"↶\n⟦ Back ⟧"},
+"ðŸŽ®No Recoil Landing ",
+"ðŸŽ®Antena ",
+"ðŸŽ®Antena ",
+"ðŸŽ®Antena Helmet+Vest3+Scope",
+"ðŸŽ®Range of Damage",
+"ðŸŽ®Ext View",
+"ðŸŽ®No Grass",
+"ðŸŽ®The Flash (becarefull!)",
+"â†¶\nâŸ¦ Back âŸ§"},
 nil,"Use after Landing")
-if NPG == 1 then WHMENU() end
+if NPG == 1 then NRNGAMING() end
 if NPG == 2 then ANTENA() end
-if NPG == 3 then ANTKAR() end
+if NPG == 3 then ANTENA() end
 if NPG == 4 then ANTENAEQ() end
 if NPG == 5 then ROD() end
 if NPG == 6 then EXVIEW() end
@@ -91,15 +98,15 @@ if NPG == 9 then HOME() end
 end
 function COLOR()
 NPC = gg.choice({
-"🏳‍🌈Green (Tested)",
-"🏳‍🌈Yellow (Tested)",
-"🏳‍🌈White v1",
-"🏳‍🌈White v2",
-"🏳‍🌈White v3",
-"🏳‍🌈Black v1",
-"🏳‍🌈Black v2",
-"🏳‍🌈Rain Bow",
-"↶\n⟦ Back ⟧"},
+"ðŸ³â€ðŸŒˆGreen (Tested)",
+"ðŸ³â€ðŸŒˆYellow (Tested)",
+"ðŸ³â€ðŸŒˆWhite v1",
+"ðŸ³â€ðŸŒˆWhite v2",
+"ðŸ³â€ðŸŒˆWhite v3",
+"ðŸ³â€ðŸŒˆBlack v1",
+"ðŸ³â€ðŸŒˆBlack v2",
+"ðŸ³â€ðŸŒˆRain Bow",
+"â†¶\nâŸ¦ Back âŸ§"},
 nil,"For Emulator Just Work With White/Black")
 if NPC == 1 then BGREEN() end
 if NPC == 2 then BYEL() end
@@ -114,18 +121,18 @@ if NPC == 9 then HOME() end
 end
 function WEAPON()
 NPW = gg.choice({
-"🔪KAR",
-"🔪M24",
-"🔪AWM",
-"🔪M416	",
-"🔪M16A4	",
-"🔪AKM	",
-"🔪SCAR-L	",
-"🔪VSS	",
-"🔪All SMG",
-"🔪CrossBow",
-"🔪Mini	",
-"↶\n⟦ Back ⟧"},
+"ðŸ”ªKAR",
+"ðŸ”ªM24",
+"ðŸ”ªAWM",
+"ðŸ”ªM416	",
+"ðŸ”ªM16A4	",
+"ðŸ”ªAKM	",
+"ðŸ”ªSCAR-L	",
+"ðŸ”ªVSS	",
+"ðŸ”ªAll SMG",
+"ðŸ”ªCrossBow",
+"ðŸ”ªMini	",
+"â†¶\nâŸ¦ Back âŸ§"},
 nil,"Aktifin Kalau Udah dapet Senjatane yo")
 if NPW == 1 then KARFAST() 	end
 if NPW == 2 then M24FAST() 	end
@@ -143,11 +150,11 @@ if NPW == 12 then HOME() end
 end
 function SCOPE()
 ZOOMX = gg.choice({
-"🔍Scope4x ON",
-"🔍Scope4x OFF",
-"🔍Scope8x ON",
-"🔍Scope8x OFF",
-"↶\n⟦ Back ⟧"},
+"ðŸ”Scope4x ON",
+"ðŸ”Scope4x OFF",
+"ðŸ”Scope8x ON",
+"ðŸ”Scope8x OFF",
+"â†¶\nâŸ¦ Back âŸ§"},
 nil,"Scope Mode Untuk Red Dot")
 if ZOOMX == 1 then Z4X() end
 if ZOOMX == 2 then Z4O() end
@@ -158,19 +165,31 @@ if ZOOMX == 5 then HOME() end
 end
 -----------------------------------------------------// LOBBY //-----------------------------------------------------
 
+function WHN()
+gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+  gg.searchNumber("135,215D;4,140D;3.7615819e-37;2::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(10)
+  gg.editAll("130", gg.TYPE_FLOAT)
+  gg.clearResults()
+  gg.setRanges(gg.REGION_BAD)
+  gg.searchNumber("194D;3.7615819e-37;2;-1;1;-127::", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(10)
+  gg.editAll("130", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("WH SD 625 Aktif")
+end
 function NRN()
 gg.clearResults()
-gg.searchNumber("1868784978;1850305641;28518", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("1868784978", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(1000)
-gg.editAll("1868756421", gg.TYPE_DWORD)
+  gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.searchNumber("50;200;0.5;40.0;0.3:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("0.3", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(20)
+  gg.editAll("300", gg.TYPE_FLOAT)
 gg.clearResults()
-gg.searchNumber("1750294898;1415932769;1819307365", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("1750294898;1415932769;1819307365", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(1000)
-gg.editAll("100000", gg.TYPE_DWORD)
-gg.clearResults()
-gg.toast("No Recoil Aktif")
+gg.toast("No Recoil Lobby Aktif")
 end
 function MIAM()
 gg.clearResults()
@@ -300,32 +319,23 @@ end
 
 -----------------------------------------------------// GAME //-----------------------------------------------------
 
-function WHMENU()
+function NRNGAMING()
 gg.clearResults()
-gg.setRanges(gg.REGION_BAD) gg.searchNumber("4.814603e21;3.5032462e-44;3.7615819e-37;2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(30)
-  gg.editAll("120", gg.TYPE_FLOAT)
+  gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.searchNumber("1;10000D;100000:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.searchNumber("1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+  gg.getResults(200)
+  gg.editAll("0.001", gg.TYPE_FLOAT)
   gg.clearResults()
-  gg.setRanges(gg.REGION_BAD)
-  gg.searchNumber("-5.5693206e-40;4.814603e21;3.7615819e-37;2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(30)
-  gg.editAll("120", gg.TYPE_FLOAT)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_BAD)
-  gg.searchNumber("5.1848043e-44;-1.0285578e-38;3.7615819e-37;2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(30)
-  gg.editAll("120", gg.TYPE_FLOAT)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_BAD)
-  gg.searchNumber("304.00009155273;3.7615819e-37;2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(30)
-  gg.editAll("120", gg.TYPE_FLOAT)
+  gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.setVisible(false)
+  gg.searchNumber("0.2~0.3;53;30;1::", gg.TYPE_FLOAT)
+  gg.setVisible(false)
+  gg.searchNumber("0.2~0.3;1::", gg.TYPE_FLOAT)
+  gg.getResults(200)
+  gg.editAll("0", gg.TYPE_FLOAT)
 gg.clearResults()
-gg.toast("Mata Dewa Aktif")
+gg.toast("No Recoil Landing Aktif")
 end
 function ANTENA()
 gg.clearResults()
@@ -652,13 +662,13 @@ end
 -----------------------------------------------------// END BODY //-----------------------------------------------------
 function backdoor() 
     gg.setVisible(false)
-    HH = gg.alert('🛡️Bypass?', '✅[Yes]', '❎[No]')
+    HH = gg.alert('ðŸ›¡ï¸Bypass?', 'âœ…[Yes]', 'âŽ[No]')
     if HH == 1 then bypass() end
     if HH == 2 then end 
 end 
 backdoor()
 function EXIT()
-gg.toast("⊶Thanks For Use Me⊷")
+gg.toast("âŠ¶Thanks For Use MeâŠ·")
   os.exit()
 end
 while true do
