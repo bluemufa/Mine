@@ -49,6 +49,7 @@ function NRMENU()
 NRMEN = gg.alert('Lobby/Land?', '[Landing]', '[Lobby]')
     if NRMEN == 1 then NRNGAMING() end
     if NRMEN == 2 then NRN() end 
+end
 function LOBBY()
 NPL = gg.choice({
 "Wallhack SD 625",
