@@ -1,5 +1,5 @@
 function bypass()
-gg.toast("ðŸ›¡ï¸Bypass is working...")
+gg.toast("🛡️Bypass is working...")
 gg.setVisible(false)
 gg.setRanges(gg.REGION_ANONYMOUS | gg.REGION_BAD)
 gg.skipRestoreState()
@@ -25,19 +25,19 @@ gg.searchNumber("1.2F;1.8F:9::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1F;1.4F:3::1", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("1.1D;1.4D:2::10", gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL, 0, -1)
 gg.clearResults(850)
-    gg.toast(os.date("ðŸ›¡ï¸%Y/%m/%d  %H:%M:%S Bypass Aktif"))
+    gg.toast(os.date("🛡️%Y/%m/%d  %H:%M:%S Bypass Aktif"))
 end
 
 function HOME()
   HM = gg.choice({
-    "ðŸ‘[No Rec Lobby/Land]",
-    "ðŸŽ®[INGAME]",
-    "ðŸ³â€ðŸŒˆ[COLOR]",
-    "ðŸ”ª[WEAPONFAST]",
-    "ðŸ”[SCOPE]",
-    "ðŸ [LOBBY]",
-    "âŒâŸ¦ Exit âŸ§"
-  }, nil, "âŠ¶Ace Burgerkill's Script8.0âŠ·")
+    "[No Rec Lobby/Land]",
+    "🎮[INGAME]",
+    "🌈[COLOR]",
+    "🔪[WEAPONFAST]",
+    "🔍[SCOPE]",
+    "🏠[LOBBY]",
+    "❌⟦ Exit ⟧"
+  }, nil, "⊶Ace Burgerkill's Script⊷")
   if HM == 1 then	NRMENU()	end
   if HM == 2 then	INGAME()	end
   if HM == 3 then	COLOR()		end
@@ -54,14 +54,14 @@ HSMEN = gg.alert('Lobby/Land?', '[Landing]', '[Lobby]')
     if HSMEN == 2 then NRN() end 
 function LOBBY()
 NPL = gg.choice({
-"ðŸ Wallhack SD 625",
-"ðŸ No RecoilâŸ¦ Once âŸ§",
-"ðŸ Micro AimâŸ¦ Once âŸ§",
-"ðŸ Medium AimâŸ¦ Once âŸ§",
-"ðŸ Ultra AimâŸ¦ Dont âŸ§",
-"ðŸ Auto HSâŸ¦ Once âŸ§",
-"ðŸ Small CrosshairâŸ¦ Once âŸ§",
-"â†¶\nâŸ¦ Back âŸ§"},
+"🏠Wallhack SD 625",
+"🏠No Recoil⟦ Once ⟧",
+"🏠Micro Aim⟦ Once ⟧",
+"🏠Medium Aim⟦ Once ⟧",
+"🏠Ultra Aim⟦ Once ⟧",
+"🏠Auto HS⟦ Once ⟧",
+"🏠Small Crosshair⟦ Once ⟧",
+"↶\n⟦ Back ⟧"},
 nil,"Don't Forget Aktive No Recoil again in Game Menu")
 if NPL == 1 then WHN() end
 if NPL == 2 then NRN() end
@@ -75,15 +75,15 @@ if NPL == 8 then HOME() end
 end
 function INGAME()
 NPG = gg.choice({
-"ðŸŽ®No Recoil Landing ",
-"ðŸŽ®Antena ",
-"ðŸŽ®Antena ",
-"ðŸŽ®Antena Helmet+Vest3+Scope",
-"ðŸŽ®Range of Damage",
-"ðŸŽ®Ext View",
-"ðŸŽ®No Grass",
-"ðŸŽ®The Flash (becarefull!)",
-"â†¶\nâŸ¦ Back âŸ§"},
+"No Recoil Landing ",
+"Antena ",
+"Antena ",
+"Antena Helmet+Vest3+Scope",
+"Range of Damage",
+"Ext View",
+"No Grass",
+"he Flash (becarefull!)",
+"↶\n⟦ Back ⟧"},
 nil,"Use after Landing")
 if NPG == 1 then NRNGAMING() end
 if NPG == 2 then ANTENA() end
@@ -106,7 +106,7 @@ NPC = gg.choice({
 "ðŸ³â€ðŸŒˆBlack v1",
 "ðŸ³â€ðŸŒˆBlack v2",
 "ðŸ³â€ðŸŒˆRain Bow",
-"â†¶\nâŸ¦ Back âŸ§"},
+"↶\n⟦ Back ⟧"},
 nil,"For Emulator Just Work With White/Black")
 if NPC == 1 then BGREEN() end
 if NPC == 2 then BYEL() end
@@ -132,7 +132,7 @@ NPW = gg.choice({
 "ðŸ”ªAll SMG",
 "ðŸ”ªCrossBow",
 "ðŸ”ªMini	",
-"â†¶\nâŸ¦ Back âŸ§"},
+"↶\n⟦ Back ⟧"},
 nil,"Aktifin Kalau Udah dapet Senjatane yo")
 if NPW == 1 then KARFAST() 	end
 if NPW == 2 then M24FAST() 	end
@@ -154,7 +154,7 @@ ZOOMX = gg.choice({
 "ðŸ”Scope4x OFF",
 "ðŸ”Scope8x ON",
 "ðŸ”Scope8x OFF",
-"â†¶\nâŸ¦ Back âŸ§"},
+"↶\n⟦ Back ⟧"},
 nil,"Scope Mode Untuk Red Dot")
 if ZOOMX == 1 then Z4X() end
 if ZOOMX == 2 then Z4O() end
@@ -662,13 +662,13 @@ end
 -----------------------------------------------------// END BODY //-----------------------------------------------------
 function backdoor() 
     gg.setVisible(false)
-    HH = gg.alert('ðŸ›¡ï¸Bypass?', 'âœ…[Yes]', 'âŽ[No]')
+    HH = gg.alert('🛡️Bypass?', '✅[Yes]', '❎[No]')
     if HH == 1 then bypass() end
     if HH == 2 then end 
 end 
 backdoor()
 function EXIT()
-gg.toast("âŠ¶Thanks For Use MeâŠ·")
+gg.toast("⊶Thanks For Use Me⊶")
   os.exit()
 end
 while true do
