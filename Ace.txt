@@ -6,12 +6,12 @@ gg.searchNumber("1D;1F;1E;1Q;1X", gg.TYPE_AUTO, false, gg.SIGN_EQUAL, 0, -1)
 gg.clearResults() 
 gg.searchNumber("1D;1F;1E;1Q;1X", gg.TYPE_AUTO, false, gg.SIGN_EQUAL, 0, -1)
 gg.clearResults() 
-    gg.toast(os.date("%Y/%m/%d  %H:%M:%S Bypass Aktif"))
+gg.toast(os.date("%Y/%m/%d  %H:%M:%S Bypass Aktif"))
 end
 
 function HOME()
   HM = gg.choice({
-    "[No Rec/Spread]",
+    "[No Rec/Spread(Custom)]",
     "[INGAME]",
     "[COLOR]",
     "[WEAPONFAST]",
@@ -30,13 +30,12 @@ function HOME()
 end
 
 function NRMENU()	
-NRMEN = gg.alert('No Rec/Spread?', '[No Rec]', '[No Spread]')
+NRMEN = gg.alert('No (Rec+Spread) ato cuman No Rec?', '[No Rec]', '[No Rec+Spread]')
     if NRMEN == 1 then NOR() end
-    if NRMEN == 2 then NRN1() end 
+    if NRMEN == 2 then NOR() NRN1() end 
 end
-
 function NRN1()
-      gg.clearResults()
+gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("53;30;0.6~1.2::15", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("0.6~1.2", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
@@ -46,56 +45,47 @@ gg.toast("No Spread Actived")
 end
 function NOR()
 gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1,084,227,584D;1D;0.64999997616F;1.2520827e-32F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("1.2520827e-32", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(100)
-gg.editAll("1.4012985e-43", gg.TYPE_FLOAT)
+  gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.clearResults()
+  gg.searchNumber("176293393;8F;9.5F;15F::", gg.TYPE_DWORD)
+  gg.searchNumber("176293393", gg.TYPE_DWORD)
+  gg.getResults(10)
+  gg.editAll("176293392", gg.TYPE_DWORD)
 gg.toast("No Recoil Actived")
 end
 
 function LOBBY()
 NPL = gg.choice({
 "Wallhack SD 625",
-"No Recoil",
-"Micro Aim",
-"Medium Aim",
-"Ultra Aim",
-"Auto HS",
-"Small Crosshair",
+"No Recoil (XMV)",
+"Auto Headshoot",
 "Back"},
-nil,"Don't Forget Aktive No Recoil again in Game Menu")
+nil,"")
 if NPL == 1 then WHN() end
 if NPL == 2 then NRN() end
-if NPL == 3 then MIAM() end
-if NPL == 4 then MAN() end
-if NPL == 5 then UAN() end
-if NPL == 6 then AHS() end
-if NPL == 7 then SCHN() end
-if NPL == 8 then HOME() end
+if NPL == 3 then AHS() end
+if NPL == 4 then HOME() end
  HOMEDM = -1
 end
 function INGAME()
 NPG = gg.choice({
-"No Recoil Landing ",
+"No Recoil Landing (XMV) ",
 "Antena ",
-"Antena ",
+"Small Crosshair",
 "Antena Helmet+Vest3+Scope",
-"Range of Damage",
 "Ext View",
-"No Grass",
-"The Flash (becarefull!)",
+"No Grass (Erangel)",
+"No Grass (Sanhok)",
 "Back"},
-nil,"Use after Landing")
+nil,"Use after landing & dont combine No Rec XMV with No Rec Custom")
 if NPG == 1 then NRNGAMING() end
 if NPG == 2 then ANTENA() end
-if NPG == 3 then ANTENA() end
+if NPG == 3 then SCHN() end
 if NPG == 4 then ANTENAEQ() end
-if NPG == 5 then ROD() end
-if NPG == 6 then EXVIEW() end
-if NPG == 7 then NOGRASS() end
-if NPG == 8 then THEFLASH() end
-if NPG == 9 then HOME() end
+if NPG == 5 then EXVIEW() end
+if NPG == 6 then NGE() end
+if NPG == 7 then NGS() end
+if NPG == 8 then HOME() end
  HOMEDM = -1
 end
 function COLOR()
@@ -133,7 +123,6 @@ NPW = gg.choice({
 "VSS	",
 "All SMG",
 "CrossBow",
-"Mini	",
 "Back"},
 nil,"Aktifin Kalau Udah dapet Senjatane yo")
 if NPW == 1 then KARFAST() 	end
@@ -146,8 +135,7 @@ if NPW == 7 then SCARFAST() end
 if NPW == 8 then VSSFAST() end
 if NPW == 9 then SMGFAST() end
 if NPW == 10 then CBFAST() end
-if NPW == 11 then MINIFAST() end
-if NPW == 12 then HOME() end
+if NPW == 11 then HOME() end
  HOMEDM = -1
 end
 function SCOPE()
@@ -174,7 +162,7 @@ gg.searchNumber("8E;2.5;6.0255834e-44::150", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL
 gg.searchNumber("2.5", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(100)
 gg.editAll("-999", gg.TYPE_FLOAT)
-gg.toast("Anti-Ban Code Inject")
+gg.toast("Anti-Ban Code Injected")
 gg.clearResults()
 gg.setRanges(gg.REGION_BAD)
 gg.searchNumber("2.718519e-43F;3.7615819e-37F;2.0F;0.00999999978F::200",gg.TYPE_FLOAT,false,gg.SIGN_EQUAL,0,-1)
@@ -199,57 +187,7 @@ gg.clearResults()
 gg.clearResults()
 gg.toast("No Recoil Lobby Aktif")
 end
-function MIAM()
-gg.clearResults()
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("3.5;1;200;20::250\000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("5", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(100)
-gg.editAll("9999999999", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("Micro Aim Aktif")
-end
-function MAN()
-gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("3.5F;1F;1F;1F;200F;20F:512", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("200", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(850)
-  gg.editAll("9999", gg.TYPE_FLOAT)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("3.5F;1F;1F;1F;9999F;20F:512", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("3.5", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(850)
-  gg.editAll("-9999", gg.TYPE_FLOAT)
-gg.toast("Medium AIM Aktif!")
-gg.clearResults()
-end
-function UAN()
-gg.clearResults()
-gg.clearResults()
-gg.clearResults()
-  gg.searchNumber("999", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.clearResults()
-  gg.clearResults()
-  gg.searchNumber("3.5;1;200;20::999", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("3.5;1;200;20", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(300)
-  gg.editAll("-1.0e10", gg.TYPE_FLOAT)
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.clearResults()
-  gg.clearResults()
-  gg.searchNumber("8;16;18", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("8;16;18", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(1000)
-  gg.editAll("38.5", gg.TYPE_FLOAT)
-gg.toast("Ultra AIM Aktif!")
-gg.clearResults()
-gg.clearResults()
-gg.clearResults()
-end
+
 function AHS()	
 HSMEN = gg.alert('Low or Custom HS?', '[Custom]', '[Low]')
     if HSMEN == 1 then CUSHS() end
@@ -315,15 +253,7 @@ gg.editAll(val[1], gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("Custom HS Aktif - Don't use scope when enemies are nearby on you")
 end
-function SCHN()
-gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("3.20000004768;1.09375", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(100)
-gg.editAll("0", gg.TYPE_FLOAT)
-gg.toast("Small Crosshair Aktif!")
-gg.clearResults()
-end
+
 
 -----------------------------------------------------// GAME //-----------------------------------------------------
 
@@ -343,7 +273,7 @@ gg.clearResults()
   gg.getResults(200)
   gg.editAll("0", gg.TYPE_FLOAT)
 gg.clearResults()
-gg.toast("No Recoil Landing Aktif")
+gg.toast("No Recoil Landing Aktif (xmv)")
 end
 function ANTENA()
 gg.clearResults()
@@ -351,6 +281,7 @@ gg.clearResults()
 gg.searchNumber("18.38613319397;0.53447723389;3.42665576935", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(3)
 gg.editAll("6666", gg.TYPE_FLOAT)
+gg.toast("Antena Run Aktif!")
   gg.searchNumber("0.53446006775F;-1.68741035461F:501", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
   gg.searchNumber("-1.68741035461", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
   gg.getResults(1995)
@@ -361,15 +292,15 @@ gg.editAll("6666", gg.TYPE_FLOAT)
   gg.getResults(1995)
   gg.editAll("19995", gg.TYPE_FLOAT)
 gg.clearResults()
-gg.toast("Antena Aktif!")
+gg.toast("Antena Always Aktif!")
 end
-function ANTKAR()
+function SCHN()
 gg.clearResults()
-gg.searchNumber("1.4943189620972;-2.3106904029846;-1.5036518573761;0.33800649642944;0.19816112518311::340", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber("1.4943189620972", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(10)
-gg.editAll("9999999", gg.TYPE_FLOAT)
-gg.toast("Antena Kar Aktif")
+  gg.setRanges(gg.REGION_ANONYMOUS)
+  gg.searchNumber("3.20000004768;1.09375", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("0", gg.TYPE_FLOAT)
+gg.toast("Small Crosshair Aktif!")
 gg.clearResults()
 end
 function ANTENAEQ()
@@ -394,15 +325,6 @@ gg.getResults(1)
 gg.editAll("003,005,0", gg.TYPE_FLOAT)
 gg.toast("8x Scope has been activated")
 end
-function ROD()
-gg.clearResults()
-	gg.searchNumber("1F;-8.6457681e12F;15F;28F;16F;26F;8F;18F:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-	gg.searchNumber("15.0F;28.0F;16.0F;26.0F;8.0F;18.0F:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-	gg.getResults(500)
-	gg.editAll("113", gg.TYPE_FLOAT)
-gg.toast("Range of Damage Aktif")
-gg.clearResults()
-end
 function EXVIEW()
 gg.clearResults()
   gg.setRanges(gg.REGION_ANONYMOUS)
@@ -414,26 +336,22 @@ gg.clearResults()
 gg.clearResults()
 gg.toast("Ext View Aktif!")
 end
-function NOGRASS()
+function NGE()
 gg.clearResults()
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.searchNumber("8.0F;1.20000004768F;0.80000001192F;1.5F;0.80000001192F;1.5F::512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.searchNumber("8.0", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(300)
 gg.editAll("0", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("No Grass Aktif!")
+gg.toast("No Grass Erangel Aktif!")
 end
-function THEFLASH()
+function NGS()
 gg.clearResults()
-gg.searchNumber('999', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber('10.90734863281;0.00999999978', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.searchNumber('10.9073486328', gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(300)
-gg.editAll('9.411', gg.TYPE_FLOAT)
-gg.clearResults()
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("11;25;-1,082,130,432", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("11", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10)
+gg.editAll("12", gg.TYPE_DWORD)
 gg.toast(" The flash Aktif")
 end
 -----------------------------------------------------// COLOR //-----------------------------------------------------
@@ -622,15 +540,7 @@ gg.clearResults()
 gg.clearResults()
 gg.toast("CrossBow Ammo Fast Aktif")
 end
-function MINIFAST()
-gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("99000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.editAll("99000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("Mini Ammo Fast Aktif")
-end
+
 -----------------------------------------------------// SCOPE //-----------------------------------------------------
 
 function Z4X()
