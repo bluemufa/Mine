@@ -57,19 +57,19 @@ end
 function LOBBY()
 NPL = gg.choice({
 "Wallhack SD 625",
-"No Recoil (XMV)",
+"Ini Kosong",
 "Auto Headshoot",
 "Back"},
-nil,"")
+nil,"Xmv buat jaga-jaga di hapus")
 if NPL == 1 then WHN() end
-if NPL == 2 then NRN() end
+if NPL == 2 then end
 if NPL == 3 then AHS() end
 if NPL == 4 then HOME() end
  HOMEDM = -1
 end
 function INGAME()
 NPG = gg.choice({
-"No Recoil Landing (XMV) ",
+"Ini Kosong",
 "Antena ",
 "Small Crosshair",
 "Antena Helmet+Vest3+Scope",
@@ -77,8 +77,8 @@ NPG = gg.choice({
 "No Grass (Erangel)",
 "No Grass (Sanhok)",
 "Back"},
-nil,"Use after landing & dont combine No Rec XMV with No Rec Custom")
-if NPG == 1 then NRNGAMING() end
+nil,"Xmv tak apus ")
+if NPG == 1 then end
 if NPG == 2 then ANTENA() end
 if NPG == 3 then SCHN() end
 if NPG == 4 then ANTENAEQ() end
@@ -94,12 +94,12 @@ NPC = gg.choice({
 "Yellow (Tested)",
 "White v1",
 "White v2",
-"White v3",
+"White v3(Tested)",
 "Black v1",
-"Black v2",
+"Black v2(Tested)",
 "Cyan Blue",
 "Back"},
-nil,"For Emulator Just Work With White/Black")
+nil,"Pake yg udah tested aja")
 if NPC == 1 then BGREEN() end
 if NPC == 2 then BYEL() end
 if NPC == 3 then BW1() end
@@ -116,26 +116,16 @@ NPW = gg.choice({
 "KAR",
 "M24",
 "AWM",
-"M416	",
-"M16A4	",
-"AKM	",
-"SCAR-L	",
 "VSS	",
-"All SMG",
 "CrossBow",
 "Back"},
-nil,"Aktifin Kalau Udah dapet Senjatane yo")
+nil,"Buat Jaga-jaga, Tipe Selain Sniper Ane apus")
 if NPW == 1 then KARFAST() 	end
 if NPW == 2 then M24FAST() 	end
 if NPW == 3 then AWMFAST() 	end
-if NPW == 4 then M416FAST() end
-if NPW == 5 then M16A4FAST()	end
-if NPW == 6 then AKMFAST() end
-if NPW == 7 then SCARFAST() end
-if NPW == 8 then VSSFAST() end
-if NPW == 9 then SMGFAST() end
-if NPW == 10 then CBFAST() end
-if NPW == 11 then HOME() end
+if NPW == 4 then VSSFAST() end
+if NPW == 5 then CBFAST() end
+if NPW == 6 then HOME() end
  HOMEDM = -1
 end
 function SCOPE()
@@ -176,16 +166,6 @@ gg.getResults(30)
 gg.editAll("120",gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("WH SD 625 Aktif")
-end
-function NRN()
-gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("50;200;0.5;40.0;0.3:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("0.3", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(20)
-  gg.editAll("300", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("No Recoil Lobby Aktif")
 end
 
 function AHS()	
@@ -257,24 +237,6 @@ end
 
 -----------------------------------------------------// GAME //-----------------------------------------------------
 
-function NRNGAMING()
-gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("1;10000D;100000:512", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(200)
-  gg.editAll("0.001", gg.TYPE_FLOAT)
-  gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.setVisible(false)
-  gg.searchNumber("0.2~0.3;53;30;1::", gg.TYPE_FLOAT)
-  gg.setVisible(false)
-  gg.searchNumber("0.2~0.3;1::", gg.TYPE_FLOAT)
-  gg.getResults(200)
-  gg.editAll("0", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("No Recoil Landing Aktif (xmv)")
-end
 function ANTENA()
 gg.clearResults()
   gg.searchNumber("18.38613319397F;0.53447723389F;3.42665576935F", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
@@ -323,7 +285,7 @@ gg.searchNumber("3.4779739379883;2.8345839977264;3.1967880725861;3.8841888904572
 gg.searchNumber("3.4779739379883", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(1)
 gg.editAll("003,005,0", gg.TYPE_FLOAT)
-gg.toast("8x Scope has been activated")
+gg.toast("8x Scope ")
 end
 function EXVIEW()
 gg.clearResults()
@@ -343,7 +305,7 @@ gg.searchNumber("8.0F;1.20000004768F;0.80000001192F;1.5F;0.80000001192F;1.5F::51
 gg.searchNumber("8.0", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(300)
 gg.editAll("0", gg.TYPE_FLOAT)
-gg.toast("No Grass Erangel Aktif!")
+gg.toast("Ilalang Ilang di erangel angel")
 end
 function NGS()
 gg.clearResults()
@@ -352,7 +314,7 @@ gg.searchNumber("11;25;-1,082,130,432", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, 
 gg.searchNumber("11", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
 gg.getResults(10)
 gg.editAll("12", gg.TYPE_DWORD)
-gg.toast(" The flash Aktif")
+gg.toast("Ilalang Ilang di sanhok")
 end
 -----------------------------------------------------// COLOR //-----------------------------------------------------
 
@@ -477,42 +439,6 @@ gg.clearResults()
 gg.clearResults()
 gg.toast("AWM Ammo Fast Aktif")
 end
-function M416FAST()
-gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("88000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.editAll("99000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("M416 Ammo Fast Aktif")
-end
-function M16A4FAST()
-gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("90000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.editAll("99000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("M16A4 Ammo Fast Aktif")
-end
-function AKMFAST()
-gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("71500", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.editAll("99000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("AKM Ammo Fast Aktif")
-end
-function SCARFAST()
-gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("87000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.editAll("99000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("SCAR-L Ammo Fast Aktif")
-end
 function VSSFAST()
 gg.clearResults()
   gg.setRanges(gg.REGION_ANONYMOUS)
@@ -521,15 +447,6 @@ gg.clearResults()
   gg.editAll("99000", gg.TYPE_FLOAT)
 gg.clearResults()
 gg.toast("VSS Ammo Fast Aktif")
-end
-function SMGFAST()
-gg.clearResults()
-  gg.setRanges(gg.REGION_ANONYMOUS)
-  gg.searchNumber("40000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
-  gg.getResults(100)
-  gg.editAll("99000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.toast("All SMG Ammo Fast Aktif")
 end
 function CBFAST()
 gg.clearResults()
