@@ -1,3 +1,4 @@
+function bypass()
 gg.toast("Bypass is working...")
 gg.setVisible(false)
 gg.setRanges(gg.REGION_ANONYMOUS)
