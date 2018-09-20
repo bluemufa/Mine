@@ -110,9 +110,9 @@ function COLOR()
 NPC = gg.choice({
 "Green (Tested)",
 "Yellow (Tested)",
-"White v1",
+"Blue Testing",
 "White v2",
-"White v3(Tested)",
+"White v3(Ban)",
 "Black v1",
 "Black v2(Tested)",
 "Cyan Blue",
@@ -366,13 +366,13 @@ gg.toast("Yellow Aktif")
 end
 function BW1()
 gg.clearResults()
- gg.setRanges(gg.REGION_BAD)
-gg.searchNumber("539,246,596;8200D;2.4903147e21F", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-  gg.searchNumber("8200", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
-gg.getResults(30)
-  gg.editAll("8300", gg.TYPE_DWORD) 
+gg.setRanges(gg.REGION_BAD)
+gg.searchNumber("3;1,081,612,800;278,200,320", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("3", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(100)
+gg.editAll("5", gg.TYPE_DWORD)
 gg.clearResults()
-gg.toast("White v1 Aktif")
+gg.toast("Blerreng gaes")
 end
 function BW2()
 gg.clearResults()
